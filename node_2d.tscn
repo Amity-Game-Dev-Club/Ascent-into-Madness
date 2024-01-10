@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1iiscnq3nxdd"]
+
+[ext_resource type="Texture2D" uid="uid://6k4fcaamvgyc" path="res://gress.jpg" id="1_ypudu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Gress" type="Sprite2D" parent="."]
+position = Vector2(176, 102)
+texture = ExtResource("1_ypudu")
