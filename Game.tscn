@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2lqxe8c7ye6j"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 242.0
+offset_top = 200.0
+offset_right = 648.0
+offset_bottom = 436.0
+text = "* 1 made change to main game"
