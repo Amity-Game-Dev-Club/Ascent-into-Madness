@@ -1,15 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcvbifluty55f"]
-
-[ext_resource type="Texture2D" uid="uid://b5s77xcuxf655" path="res://mystic-river-main-and-thumbnail-1503491660.jpg" id="1_sllm2"]
+[gd_scene format=3 uid="uid://dcvbifluty55f"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Mystic-river-main-and-thumbnail-1503491660" type="Sprite2D" parent="."]
-position = Vector2(213, 143)
-scale = Vector2(0.424, 0.444969)
-texture = ExtResource("1_sllm2")
-
-[node name="Mystic-river-main-and-thumbnail-1503491660" type="Sprite2D" parent="Mystic-river-main-and-thumbnail-1503491660"]
-position = Vector2(1714.62, 770.841)
-scale = Vector2(0.999867, 1.15718)
-texture = ExtResource("1_sllm2")

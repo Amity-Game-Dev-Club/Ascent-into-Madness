@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bx4xuixff7qr5"]
+
+[node name="Main Title" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 39.0
+offset_right = 844.0
+offset_bottom = 221.0
+text = "Ascent into Madness"
