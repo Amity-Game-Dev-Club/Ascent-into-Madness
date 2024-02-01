@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://clw3u3vd0oppm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 983.0
+offset_bottom = 504.0
+text = "insert settings here"
