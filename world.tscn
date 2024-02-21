@@ -1,0 +1,55 @@
+[gd_scene load_steps=12 format=3 uid="uid://42yteosad0tx"]
+
+[ext_resource type="PackedScene" uid="uid://djbgeait0chca" path="res://playa.tscn" id="1_hfdpw"]
+[ext_resource type="Texture2D" uid="uid://b5s77xcuxf655" path="res://Sprites/mystic-river-main-and-thumbnail-1503491660.jpg" id="2_1rgy1"]
+[ext_resource type="Script" path="res://backround.gd" id="3_1mht1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y6khc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_tcvwd"]
+sky_material = SubResource("ProceduralSkyMaterial_y6khc")
+
+[sub_resource type="Environment" id="Environment_7rbbx"]
+background_mode = 2
+sky = SubResource("Sky_tcvwd")
+tonemap_mode = 2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0ivb7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dwlo2"]
+size = Vector3(200, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_um5c4"]
+size = Vector3(200, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lb0n7"]
+albedo_texture = ExtResource("2_1rgy1")
+
+[sub_resource type="QuadMesh" id="QuadMesh_8vl3p"]
+material = SubResource("StandardMaterial3D_lb0n7")
+size = Vector2(200, 200)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7rbbx")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_hfdpw")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["floor"]]
+physics_material_override = SubResource("PhysicsMaterial_0ivb7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["floor"]]
+shape = SubResource("BoxShape3D_dwlo2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" groups=["floor"]]
+mesh = SubResource("BoxMesh_um5c4")
+
+[node name="backround" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.2204, -0.87003)
+mesh = SubResource("QuadMesh_8vl3p")
+script = ExtResource("3_1mht1")

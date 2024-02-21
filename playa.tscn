@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://djbgeait0chca"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_d1uh4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dthor"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e4cqp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tk4xf"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_jjbx8"]
+material = SubResource("StandardMaterial3D_tk4xf")
+radius = 0.1
+height = 0.1
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.918, 0)
+script = ExtResource("1_d1uh4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_dthor")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468582, 5.68409)
+
+[node name="grippers" type="Node3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_e4cqp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_e4cqp")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+mesh = SubResource("SphereMesh_jjbx8")

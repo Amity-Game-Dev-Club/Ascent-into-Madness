@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://7131pamd6xma"]
+[gd_scene load_steps=5 format=3 uid="uid://7131pamd6xma"]
 
 [ext_resource type="Script" path="res://Home Screen JACK/quit_waffling.gd" id="1_lrcid"]
+[ext_resource type="Script" path="res://Home Screen JACK/Sprite2D.gd" id="2_7j52t"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_avk7g"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_x8fga"]
 
 [node name="QuitWaffling" type="Node2D"]
 script = ExtResource("1_lrcid")
@@ -18,5 +23,14 @@ offset_top = 18.0
 offset_right = 197.0
 offset_bottom = 65.0
 text = "head back "
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("2_7j52t")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sprite2D"]
+position = Vector2(211, 220)
+scale = Vector2(136.5, 62.5)
+mesh = SubResource("CapsuleMesh_avk7g")
+texture = SubResource("MeshTexture_x8fga")
 
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
