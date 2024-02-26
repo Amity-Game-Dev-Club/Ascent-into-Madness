@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://drfjeikan3kdf"]
+
+[ext_resource type="Script" path="res://Home Screen JACK/CharacterBody2D.gd" id="1_7nmxv"]
+[ext_resource type="Texture2D" uid="uid://b7eimamiiunhx" path="res://Sprites/icon.svg" id="2_4y5aq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rofmh"]
+size = Vector2(135, 124)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b1m0w"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(74, 66)
+script = ExtResource("1_7nmxv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_rofmh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(-2.5, -0.499994)
+scale = Vector2(-128.5, 124)
+mesh = SubResource("BoxMesh_b1m0w")
+texture = ExtResource("2_4y5aq")
