@@ -17,5 +17,4 @@ config/icon="res://Sprites/icon.svg"
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

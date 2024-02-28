@@ -20,7 +20,7 @@ func _physics_process(delta):
 			# When we use jump we will instantine particles from particle effects 
 			var jump_effects = particle_effects.instantiate()
 			toes.add_child(jump_effects)
-			CPUParticles3D.
+			
 
 	# Handle jump.
 	if is_on_floor():

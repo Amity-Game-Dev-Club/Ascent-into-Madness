@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://7131pamd6xma"]
+[gd_scene load_steps=8 format=3 uid="uid://7131pamd6xma"]
 
 [ext_resource type="Script" path="res://Home Screen JACK/quit_waffling.gd" id="1_lrcid"]
 [ext_resource type="PackedScene" uid="uid://drfjeikan3kdf" path="res://player.tscn" id="2_s5nno"]
@@ -184,6 +184,11 @@ texture = ExtResource("3_24q7m")
 [sub_resource type="TileSet" id="TileSet_e44tm"]
 sources/0 = SubResource("TileSetAtlasSource_i8ctd")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwncf"]
+size = Vector2(980, 56)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o5wyd"]
+
 [node name="QuitWaffling" type="Node2D"]
 script = ExtResource("1_lrcid")
 
@@ -202,10 +207,22 @@ offset_bottom = 65.0
 text = "head back "
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_s5nno")]
+position = Vector2(398, 116)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-1, 0)
 tile_set = SubResource("TileSet_e44tm")
 format = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(490, 220)
+shape = SubResource("RectangleShape2D_cwncf")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+position = Vector2(492.375, 225)
+scale = Vector2(974.75, 71.5)
+mesh = SubResource("BoxMesh_o5wyd")
 
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

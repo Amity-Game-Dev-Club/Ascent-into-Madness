@@ -1,15 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://drfjeikan3kdf"]
+[gd_scene load_steps=8 format=3 uid="uid://drfjeikan3kdf"]
 
 [ext_resource type="Script" path="res://Home Screen JACK/CharacterBody2D.gd" id="1_7nmxv"]
-[ext_resource type="Texture2D" uid="uid://b7eimamiiunhx" path="res://Sprites/icon.svg" id="2_4y5aq"]
+[ext_resource type="Texture2D" uid="uid://d3wvamgnv1pfe" path="res://Sprites/playerweapon1.png" id="2_llwh5"]
+[ext_resource type="Script" path="res://gun.gd" id="3_ahef0"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="3_ny00l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rofmh"]
-size = Vector2(135, 124)
+size = Vector2(30, 70)
 
-[sub_resource type="BoxMesh" id="BoxMesh_b1m0w"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rvw2k"]
+radius = 0.001
+height = 41.586
+
+[sub_resource type="QuadMesh" id="QuadMesh_j8iqx"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(74, 66)
+position = Vector2(516, 304)
 script = ExtResource("1_7nmxv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -17,7 +23,23 @@ position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_rofmh")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(-2.5, -0.499994)
-scale = Vector2(-128.5, 124)
-mesh = SubResource("BoxMesh_b1m0w")
-texture = ExtResource("2_4y5aq")
+position = Vector2(-3, -0.14962)
+scale = Vector2(16000, 1.69045)
+mesh = SubResource("CapsuleMesh_rvw2k")
+
+[node name="gun" type="MeshInstance2D" parent="."]
+position = Vector2(18.375, 0.374999)
+scale = Vector2(83.25, 45.25)
+mesh = SubResource("QuadMesh_j8iqx")
+texture = ExtResource("2_llwh5")
+script = ExtResource("3_ahef0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(5, -59)
+ignore_rotation = false
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = ExtResource("3_ny00l")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(255, 2)
