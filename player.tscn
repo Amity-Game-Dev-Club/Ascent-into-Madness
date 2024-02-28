@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://drfjeikan3kdf"]
+[gd_scene load_steps=7 format=3 uid="uid://drfjeikan3kdf"]
 
 [ext_resource type="Script" path="res://Home Screen JACK/CharacterBody2D.gd" id="1_7nmxv"]
 [ext_resource type="Texture2D" uid="uid://d3wvamgnv1pfe" path="res://Sprites/playerweapon1.png" id="2_llwh5"]
-[ext_resource type="Script" path="res://gun.gd" id="3_ahef0"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="3_alm5f"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="3_ny00l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rofmh"]
@@ -11,8 +11,6 @@ size = Vector2(30, 70)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rvw2k"]
 radius = 0.001
 height = 41.586
-
-[sub_resource type="QuadMesh" id="QuadMesh_j8iqx"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(516, 304)
@@ -27,13 +25,6 @@ position = Vector2(-3, -0.14962)
 scale = Vector2(16000, 1.69045)
 mesh = SubResource("CapsuleMesh_rvw2k")
 
-[node name="gun" type="MeshInstance2D" parent="."]
-position = Vector2(18.375, 0.374999)
-scale = Vector2(83.25, 45.25)
-mesh = SubResource("QuadMesh_j8iqx")
-texture = ExtResource("2_llwh5")
-script = ExtResource("3_ahef0")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(5, -59)
 ignore_rotation = false
@@ -43,3 +34,10 @@ script = ExtResource("3_ny00l")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(255, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.999969, 1)
+scale = Vector2(3.35937, 3.71875)
+texture = ExtResource("2_llwh5")
+offset = Vector2(7.14418, 0)
+script = ExtResource("3_alm5f")
