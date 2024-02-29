@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://42yteosad0tx"]
 
-[ext_resource type="PackedScene" uid="uid://djbgeait0chca" path="res://playa.tscn" id="1_hfdpw"]
+[ext_resource type="PackedScene" uid="uid://djbgeait0chca" path="res://Emil's Work (Do not touch anyone else's work unless they know about it)/playa.tscn" id="1_hfdpw"]
 [ext_resource type="Texture2D" uid="uid://b5s77xcuxf655" path="res://Sprites/mystic-river-main-and-thumbnail-1503491660.jpg" id="2_1rgy1"]
-[ext_resource type="Script" path="res://backround.gd" id="3_1mht1"]
+[ext_resource type="Script" path="res://Emil's Work (Do not touch anyone else's work unless they know about it)/backround.gd" id="3_1mht1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y6khc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

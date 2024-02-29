@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://7131pamd6xma"]
 
 [ext_resource type="Script" path="res://Home Screen JACK/quit_waffling.gd" id="1_lrcid"]
-[ext_resource type="PackedScene" uid="uid://drfjeikan3kdf" path="res://player.tscn" id="2_s5nno"]
+[ext_resource type="PackedScene" uid="uid://drfjeikan3kdf" path="res://Emil's Work (Do not touch anyone else's work unless they know about it)/player.tscn" id="2_s5nno"]
 [ext_resource type="Texture2D" uid="uid://dhuhjs204aviy" path="res://Sprites/Stone floor mouth-Sheet.png" id="3_24q7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8ctd"]

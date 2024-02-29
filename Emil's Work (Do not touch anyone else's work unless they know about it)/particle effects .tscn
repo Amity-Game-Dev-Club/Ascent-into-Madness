@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://clignlvem63tx"]
 
-[ext_resource type="Script" path="res://particle.gd" id="1_eqyw6"]
+[ext_resource type="Script" path="res://Emil's Work (Do not touch anyone else's work unless they know about it)/particle.gd" id="1_eqyw6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7f6d5"]
 emission_enabled = true
