@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://7131pamd6xma"]
+[gd_scene load_steps=8 format=3 uid="uid://06bym5xnusvh"]
 
 [ext_resource type="Script" path="res://quit_waffling.gd" id="1_lrcid"]
 [ext_resource type="PackedScene" uid="uid://drfjeikan3kdf" path="res://player.tscn" id="2_s5nno"]

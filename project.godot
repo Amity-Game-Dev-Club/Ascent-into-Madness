@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ascent Into Madness"
-run/main_scene="res://Home Screen JACK/Temp_Title.tscn"
+run/main_scene="res://Temp_Title.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Sprites/icon.svg"
 
