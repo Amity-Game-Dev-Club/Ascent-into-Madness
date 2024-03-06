@@ -4,8 +4,8 @@ extends Sprite2D
 var gunPos = 1
 @export var mousePos = 1
 var mouse_pos = 1
-@onready var muzzle = $"gun sprite/muzzle"
-@onready var bullet = preload("res://bullet.gd")
+@onready var muzzle = $"muzzle"
+@onready var bullet = preload("res://bullet.tscn")
 #gun stats
 var damage = 25
 var firerate = 14 #fire rate is in rounds per second 

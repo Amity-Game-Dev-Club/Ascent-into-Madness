@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
-@onready var aimcast = $"gun sprite/RayCast2D"
-@onready var muzzle = $"gun sprite/muzzle"
-@onready var bullet = load("res://bullet.gd")
+@onready var bullet = load("res://bullet.tscn")
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
