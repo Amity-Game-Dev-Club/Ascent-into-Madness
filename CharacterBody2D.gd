@@ -18,15 +18,15 @@ func _physics_process(delta: float) -> void:
 			b.look_at(aimcast.get_collision_point())
 			b.shoot = true
 			
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("left", "right")
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		if Input.is_action_just_pressed("ui_up") and doublejump > 0:
+		if Input.is_action_just_pressed("jump") and doublejump > 0:
 			velocity.y = JUMP_VELOCITY
 			doublejump= doublejump - 1
 			
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		velocity.x = direction * SPEED * 1.2
 		doublejump = 1 
