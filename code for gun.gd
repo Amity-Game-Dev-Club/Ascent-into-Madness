@@ -19,10 +19,7 @@ func _input(event):
 		look_at(Vector2(mouse_pos.x, mouse_pos.y))
 
 # right now im just going to try and use hitscan wepons for now. later i will fix this and mak it into projectile wepons
-func _physics_process(delta: float) -> void:
-	if aimcast.is_colliding():
-		if Input.is_action_pressed("mouseL"):
-			var b = bullet.instantiate()
-			muzzle.add_child(b)
-			b.look_at(aimcast.get_collision_point())
-			b.shoot = true
+#func _physics_process(delta: float) -> void:
+#	if aimcast.is_colliding():
+#		if Input.is_action_pressed("mouseL"):
+####		b.shoot = true

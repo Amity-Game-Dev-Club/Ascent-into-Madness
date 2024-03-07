@@ -1,16 +1,23 @@
 extends CharacterBody2D
 
-@onready var bullet = load("res://bullet.tscn")
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var doublejump = 1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+@onready var aimcast = $"gun sprite/aiming go brrr"
+@onready var muzzle = $"gun sprite/muzzle"
+@onready var bullet = preload("res://bullet.tscn")
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+
+	if aimcast.is_colliding():
+		if Input.is_action_pressed("mouseL"):
+			var b = bullet.instantiate()
+			muzzle.add_child(b)
+			b.look_at(aimcast.get_collision_point())
+			b.shoot = true
+			
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if not is_on_floor():
 		velocity.y += gravity * delta
