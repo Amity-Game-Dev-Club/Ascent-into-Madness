@@ -214,15 +214,14 @@ position = Vector2(-1, 0)
 tile_set = SubResource("TileSet_e44tm")
 format = 2
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["floor"]]
-position = Vector2(467, 253)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" groups=["floor"]]
-position = Vector2(-3, -1.25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(490, 220)
 shape = SubResource("RectangleShape2D_cwncf")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" groups=["floor"]]
-position = Vector2(-0.625, 3.75)
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+position = Vector2(492.375, 225)
 scale = Vector2(974.75, 71.5)
 mesh = SubResource("BoxMesh_o5wyd")
 

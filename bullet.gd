@@ -1,17 +1,14 @@
 extends RigidBody2D
 var shoot = false
 const Damage = 25
-var gun = preload("res://player.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	
+	pass # Replace with function body.
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if shoot:
-		add_constant_force(Vector2(10,0),Vector2(-0.1,0))
-
+	pass
 
 
 func _on_area_2d_body_entered(body):
@@ -19,8 +16,4 @@ func _on_area_2d_body_entered(body):
 		body.health = body.health-Damage
 		queue_free()
 	else:
-		if body.is_in_group("floor"):
-			queue_free()
-			
-
-
+		queue_free() 
