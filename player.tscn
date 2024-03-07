@@ -105,11 +105,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="boi" type="CharacterBody2D"]
+[node name="boi" type="CharacterBody2D" groups=["player"]]
 position = Vector2(514, 302)
 script = ExtResource("1_k85kv")
 
-[node name="basic player collisons" type="CollisionShape2D" parent="."]
+[node name="basic player collisons" type="CollisionShape2D" parent="." groups=["player"]]
 position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_rofmh")
 
@@ -147,7 +147,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 metadata/_edit_use_anchors_ = true
 
-[node name="gun sprite" type="Sprite2D" parent="."]
+[node name="gun sprite" type="Sprite2D" parent="." groups=["player"]]
 position = Vector2(-2.86102e-05, 2.00001)
 scale = Vector2(2, 2)
 texture = ExtResource("2_llwh5")
